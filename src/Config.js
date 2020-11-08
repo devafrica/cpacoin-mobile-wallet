@@ -15,12 +15,12 @@ const Config = new function() {
     /**
      * If you can't figure this one out, I don't have high hopes
      */
-    this.coinName = 'TurtleCoin';
+    this.coinName = 'cpacoin';
 
     /**
      * Prefix for URI encoded addresses
      */
-    this.uriPrefix = 'turtlecoin://';
+    this.uriPrefix = 'cpacoin://';
 
     /**
      * How often to save the wallet, in milliseconds
@@ -31,13 +31,13 @@ const Config = new function() {
      * The amount of decimal places your coin has, e.g. TurtleCoin has two
      * decimals
      */
-    this.decimalPlaces = 2;
+    this.decimalPlaces = 6;
 
     /**
      * The address prefix your coin uses - you can find this in CryptoNoteConfig.h.
      * In TurtleCoin, this converts to TRTL
      */
-    this.addressPrefix = 3914525;
+    this.addressPrefix = 5078;
 
     /**
      * Request timeout for daemon operations in milliseconds
@@ -47,7 +47,7 @@ const Config = new function() {
     /**
      * The block time of your coin, in seconds
      */
-    this.blockTargetTime = 30;
+    this.blockTargetTime = 90;
 
     /**
      * How often to process blocks, in millseconds
@@ -74,7 +74,7 @@ const Config = new function() {
     /**
      * Your coins 'ticker', generally used to refer to the coin, i.e. 123 TRTL
      */
-    this.ticker = 'TRTL';
+    this.ticker = 'CPA';
 
     /**
      * Most people haven't mined any blocks, so lets not waste time scanning
@@ -85,26 +85,26 @@ const Config = new function() {
     /**
      * The minimum fee allowed for transactions, in ATOMIC units
      */
-    this.minimumFee = 10;
+    this.minimumFee = 1000;
 
     /**
      * Mapping of height to mixin maximum and mixin minimum
      */
     this.mixinLimits = new MixinLimits([
-        /* Height: 440,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
-        new MixinLimit(440000, 0, 100, 3),
+        /* Height: 1,000, minMixin: 0, maxMixin: 100, defaultMixin: 3 */
+        new MixinLimit(0, 0, 0, 0),
 
-        /* At height of 620000, static mixin of 7 */
-        new MixinLimit(620000, 7),
+        /* At height of 10000, static mixin of 1 */
+        new MixinLimit(620000, 1),
 
-        /* At height of 800000, static mixin of 3 */
+        /* At height of 100000, static mixin of 3 */
         new MixinLimit(800000, 3),
     ], 3 /* Default mixin of 3 before block 440,000 */);
 
     /**
      * The length of a standard address for your coin
      */
-    this.standardAddressLength = 99;
+    this.standardAddressLength = 97;
 
     /**
      * The length of an integrated address for your coin - It's the same as
@@ -113,7 +113,7 @@ const Config = new function() {
      * chunks of 8 chars at once into blocks of 11 chars, we can calculate
      * this automatically
      */
-    this.integratedAddressLength = 99 + ((64 * 11) / 8);
+    this.integratedAddressLength = 97 + ((64 * 11) / 8);
 
     /**
      * Use our native func instead of JS slowness
@@ -173,7 +173,7 @@ const Config = new function() {
     /**
      * Address to send dev fee to
      */
-    this.devFeeAddress = 'TRTLv1E3ThL66fHthRHyzPSDqeUazPA9eBQYkuRnp8svKgvdoecQtqhSRaD59CEuH8XnYsw3YGtw1RWsQSqtHLqUXu4tvk9LryR';
+    this.devFeeAddress = 'cpZFWRi1MmUUTc2qezALcbV9aDfjvkW8kSURkSjxLGK9PG6effQWSJpV4xjkCSsr8gGB5JMYrPonvXsiSokZYrvL1YTjUph4W';
 
     /**
      * Base url for price API
@@ -188,14 +188,14 @@ const Config = new function() {
      * Default daemon to use. Can either be a BlockchainCacheApi(baseURL, SSL),
      * or a ConventionalDaemon(url, port).
      */
-    this.defaultDaemon = new Daemon('blockapi.turtlepay.io', 443);
+    this.defaultDaemon = new Daemon('blocks.cryptopay.org.za', 443);
 
     /**
      * A link to where a bug can be reported for your wallet. Please update
      * this if you are forking, so we don't get reported bugs for your wallet...
      *
      */
-    this.repoLink = 'https://github.com/turtlecoin/turtlecoin-mobile-wallet/issues';
+    this.repoLink = 'https://github.com/devafrica/cpacoin-mobile-wallet/issues';
 
     /**
      * This only controls the name in the settings screen.
@@ -215,7 +215,7 @@ const Config = new function() {
     /**
      * Base URL for us to chuck a hash on the end, and find a transaction
      */
-    this.explorerBaseURL = 'https://explorer.turtlecoin.lol/?search=';
+    this.explorerBaseURL = 'https://api.cryptopay.org.za/?search=';
 
     /**
      * A link to your app on the Apple app store. Currently blank because we
