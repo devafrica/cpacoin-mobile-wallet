@@ -232,7 +232,7 @@ const Config = new function() {
      * A url to fetch node info from. Should follow the turtlepay format 
      * detailed here: https://docs.turtlepay.io/blockapi/
      */
-    this.nodeListURL = 'https://blockapi.turtlepay.io/node/list';
+    this.nodeListURL = 'https://blocks.cryptopay.org.za/node/list';
 };
 
 module.exports = Config;
