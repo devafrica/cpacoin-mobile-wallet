@@ -1,7 +1,6 @@
 package com.tonchan;
 
 import com.facebook.react.bridge.Arguments;
-import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 
 public class InputMap {

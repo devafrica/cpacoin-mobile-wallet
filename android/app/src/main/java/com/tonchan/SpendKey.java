@@ -1,6 +1,5 @@
 package com.tonchan;
 
-import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReadableMap;
 
 public class SpendKey {

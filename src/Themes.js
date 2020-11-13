@@ -7,12 +7,12 @@ export const Themes = {
         /**
          * Background colour for every component
          */
-        backgroundColour: 'white',
+        backgroundColour: '#C1BCB7',
 
         /**
-         * The primary colour used by the wallet, for TurtleCoin this is green
+         * The primary colour used by the wallet, for CpaCoin is Blue
          */
-        primaryColour: '#40C18E',
+        primaryColour: '#454CBE',
 
         /**
          * Colour for the background circles on the pin page
@@ -28,7 +28,7 @@ export const Themes = {
         /**
          * We chose to use a darker green here. It is very rarely used.
          */
-        secondaryColour: '#00853D',
+        secondaryColour: '#454CBE',
 
         /**
          * Terrible name, lol. This is used things which shouldn't pop out
@@ -50,7 +50,7 @@ export const Themes = {
         /**
          * Colour for the address book icon background
          */
-        iconColour: 'ghostwhite',
+        iconColour: 'lightgray',
 
         /**
          * Filepath of the logo to use.
@@ -62,7 +62,7 @@ export const Themes = {
              * Your foreground colour needs to be a darkish colour, or the
              * code will not scan.
              */
-            foregroundColour: 'gray',
+            foregroundColour: '#101112',
 
             /**
              * Your background colour needs to be a lightish colour, or the
@@ -75,12 +75,12 @@ export const Themes = {
         /**
          * Background colour for every component
          */
-        backgroundColour: '#2C2F33',
+        backgroundColour: '#101112',
 
         /**
-         * The primary colour used by the wallet, for TurtleCoin this is green
+         * The primary colour used by the wallet, for cpacoin is it blue
          */
-        primaryColour: '#40C18E',
+        primaryColour: '#317E31',
 
         /**
          * Colour for the background circles on the pin page
@@ -96,7 +96,7 @@ export const Themes = {
         /**
          * We chose to use a darker green here. It is very rarely used.
          */
-        secondaryColour: '#00853D',
+        secondaryColour: '#454CBE',
 
         /**
          * Terrible name, lol. This is used things which shouldn't pop out

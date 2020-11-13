@@ -1,14 +1,9 @@
 package com.tonchan;
 
-import com.tonchan.BuildConfig;
-
 import android.app.Application;
 import android.content.Intent;
-import android.util.Log;
 
 import com.facebook.react.PackageList;
-import com.facebook.hermes.reactexecutor.HermesExecutorFactory;
-import com.facebook.react.bridge.JavaScriptExecutorFactory;
 import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -16,15 +11,11 @@ import com.facebook.react.modules.network.OkHttpClientFactory;
 import com.facebook.react.modules.network.OkHttpClientProvider;
 import com.facebook.soloader.SoLoader;
 
-import com.hieuvp.fingerprint.ReactNativeFingerprintScannerPackage;
-
 import com.transistorsoft.rnbackgroundfetch.RNBackgroundFetchPackage;
 
 import com.google.android.gms.common.GooglePlayServicesUtil;
 import com.google.android.gms.security.ProviderInstaller;
 import com.google.android.gms.security.ProviderInstaller.ProviderInstallListener;
-
-import io.sentry.RNSentryPackage;
 
 import java.util.List;
 import java.io.IOException;
@@ -65,9 +56,9 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     upgradeSecurityProvider();
-
+    
     /* tonchan-vx.x.x */
-    setUserAgent("tonchan-v1.2.0");
+    setUserAgent("tonchan-v1.2.2");
 
     SoLoader.init(this, /* native exopackage */ false);
   }

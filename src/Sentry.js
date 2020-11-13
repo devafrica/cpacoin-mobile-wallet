@@ -11,7 +11,7 @@ import Config from './Config';
 /* Manually comparing to TurtleCoin to try and prevent getting errors reported
    for forks... */
 /* DO NOT CHANGE THIS LINE WITHOUT ALSO ALTERING THE Sentry.config() LINE - See readme and sentry docs. */
-const sentryIsEnabled = !__DEV__ && Config.coinName === 'TurtleCoin';
+const sentryIsEnabled = !__DEV__ && Config.coinName === 'cpacoin';
 
 export function reportCaughtException(err) {
     /* Sentry doesn't properly report arbitary objects. Convert to string if
@@ -31,8 +31,8 @@ export function reportCaughtException(err) {
 export function initSentry() {
     if (sentryIsEnabled) {
         /* CHANGE THIS IF YOU ARE FORKING! */
-        Sentry.init({ 
-          dsn: 'https://8ecf138e1d1e4d558178be3f2b5e1925@sentry.io/1411753', 
+        Sentry.init({
+          dsn: 'https://8ecf138e1d1e4d558178be3f2b5e1925@sentry.io/1411753',
         });
 
         Sentry.setRelease('com.tonchan-' + Config.appVersion);
